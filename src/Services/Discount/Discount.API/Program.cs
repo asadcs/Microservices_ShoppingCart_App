@@ -9,9 +9,9 @@ var Configuration = builder.Configuration;
 builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
 builder.Services.AddControllers();
 
-//var host = CreateHostBuilder(args).Build();
-//host.MigrateDatabase<Program>();
-//host.Run();
+var host = builder.Build();
+host.MigrateDatabase<Program>();
+host.Run();
 
 
 //builder.Services.AddHealthChecks()
